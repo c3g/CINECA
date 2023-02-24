@@ -1,0 +1,33 @@
+{
+  "Genotyping microarray": {
+    "study_type": "Genomics",
+    "experiment_type": "Genotyping",
+    "experiment_ontology": [
+      {
+        "id": "http://purl.obolibrary.org/obo/OBI_0002031",
+        "label": "genotyping by SNP array assay"
+      }
+    ],
+    "molecule": "genomic DNA",
+    "library_strategy": "Other",
+    "library_source": "Genomic"
+  },
+
+
+
+
+
+  "RNA-seq": {
+    "study_type": "Transcriptomics",
+    "experiment_type": "RNA-Seq",
+    "experiment_ontology": [
+      {
+        "id": "http://purl.obolibrary.org/obo/OBI_0001177",
+        "label": "RNA sequencing assay"
+      }
+    ],
+    "molecule": "total RNA",
+    "library_strategy": "Other",
+    "library_source": "Transcriptomic Single Cell"
+  }
+}

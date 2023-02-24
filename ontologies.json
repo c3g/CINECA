@@ -1,0 +1,42 @@
+{
+  "NCIT": {
+    "name": "National Cancer Institute Thesaurus",
+    "version": "2021-01-25",
+    "namespace_prefix": "NCIT",
+    "id": "NCIT:2021-01-25",
+    "iri_prefix": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#",
+    "url": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl"
+  },
+  "SO": {
+    "name": "Sequence types and features ontology",
+    "version": "2021-02-16",
+    "namespace_prefix": "SO",
+    "id": "SO:2021-02-16",
+    "iri_prefix": "http://purl.obolibrary.org/obo/so.owl#",
+    "url": "http://purl.obolibrary.org/obo/so.owl"
+  },
+  "OBI": {
+    "name": "Ontology for Biomedical Investigations",
+    "version": "2020-12-16",
+    "namespace_prefix": "OBI",
+    "id": "OBI:2020-12-16",
+    "iri_prefix": "http://purl.obolibrary.org/obo/obi.owl#",
+    "url": "http://purl.obolibrary.org/obo/obi.owl"
+  },
+  "EFO": {
+    "name": "Experimental Factor Ontology",
+    "version": "2021-02-16",
+    "namespace_prefix": "EFO",
+    "id": "EFO:2021-02-16",
+    "iri_prefix": "http://www.ebi.ac.uk/efo/releases/v3.27.0/efo.owl#",
+    "url": "http://www.ebi.ac.uk/efo/releases/v3.27.0/efo.owl"
+  },
+  "GENEPIO": {
+    "name": "Genomic Epidemiology Ontology",
+    "version": "2022-02-06",
+    "namespace_prefix": "GENEPIO",
+    "id": "GENEPIO:2022-02-06",
+    "iri_prefix": "http://purl.obolibrary.org/obo/genepio.owl",
+    "url": "http://purl.obolibrary.org/obo/genepio.owl"
+  }
+}
