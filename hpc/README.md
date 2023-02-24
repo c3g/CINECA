@@ -19,7 +19,6 @@ To start jobs on Beluga to split the multi-sample VCF, follow these steps (rough
 From the Bento instance, run the following commands:
 
 ```bash
-source ~/globus-env/bin/activate
 cd /data/bento_data/drop-box/data-x/
 mkdir -p sample_vcfs
 cd sample_vcfs
