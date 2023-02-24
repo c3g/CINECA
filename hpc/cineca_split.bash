@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+module load bcftools
+
 VCF="OneK1K.noGP.vcf"
 cd /home/dlough2/scratch || exit
 for sample in `bcftools query -l $VCF`; do
