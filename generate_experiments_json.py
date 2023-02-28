@@ -56,7 +56,7 @@ def main(argv):
         #Prepare additional metadata that's not in the original runs.json
         ref_exp_metadata = expmeta[run["libraryStrategy"]]
 
-        output['experiments'].append({
+        experiment = {
             "id": run['id'],
             "study_type": ref_exp_metadata["study_type"],
             "experiment_type": ref_exp_metadata["experiment_type"],
@@ -75,8 +75,11 @@ def main(argv):
             },
             "extra_properties": {
                 "run_date": run["runDate"]
-            },
-            "experiment_results": [
+            }
+        }
+
+        if run["libraryStrategy"] == "Genotyping microarray":
+            experiment["experiment_results"] = [
                 {
                     "identifier": run['biosampleId'] + "_vcf",
                     "creation_date": datetime.now().isoformat(),
@@ -91,7 +94,8 @@ def main(argv):
                     "usage": "Downloaded"
                 }
             ]
-        })
+
+        output['experiments'].append(experiment)
 
 
     today = datetime.today().strftime('%Y-%m-%d')
