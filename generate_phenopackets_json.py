@@ -46,6 +46,7 @@ def main(argv):
             phenopacket["biosamples"] = [
                 {
                     "id": i["id"],
+                    "individual_id": individual_id,
                     "sampled_tissue": {
                         "id": i["sampleOriginType"]["id"],
                         "label": i["sampleOriginType"]["label"],
