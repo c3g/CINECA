@@ -1,0 +1,96 @@
+{
+    "overview": [
+        {
+            "section_title": "Demographics",
+            "charts": [
+                {"field": "sex", "chart_type": "pie"},
+                {"field": "bmi", "chart_type": "bar"},
+                {"field": "weight", "chart_type": "bar"},
+                {"field": "height", "chart_type": "bar"}
+            ]
+        },
+        {
+            "section_title": "Experiments",
+            "charts": [
+                {"field": "experiment_type", "chart_type": "pie"}
+            ]
+        }
+    ],
+    "search": [
+        {
+            "section_title": "Demographics",
+            "fields": ["sex", "bmi", "weight", "height"]
+        },
+        {
+            "section_title": "Experiments",
+            "fields": ["experiment_type"]
+        }
+    ],
+    "fields": {
+        "sex": {
+            "mapping": "individual/sex",
+            "title": "Sex",
+            "description": "Sex at birth",
+            "datatype": "string",
+            "config": {
+                "enum": null
+            }
+        },
+        "bmi": {
+            "mapping": "individual/extra_properties/BMI",
+            "title": "BMI",
+            "description": "BMI",
+            "datatype": "number",
+            "config": {
+                "bins": [20, 25, 27, 30, 35, 40],
+                "units": ""
+            }
+        },
+       "weight": {
+            "mapping": "individual/extra_properties/Weight",
+            "title": "Weight",
+            "description": "Weight",
+            "datatype": "number",
+            "config": {
+                "bins": [50, 60, 70, 80, 90, 100],
+                "units": ""
+            }
+        },
+       "height": {
+            "mapping": "individual/extra_properties/Height-standing",
+            "title": "Height (standing)",
+            "description": "Height (standing)",
+            "datatype": "number",
+            "config": {
+                "bins": [100, 120, 140, 160, 180, 200],
+                "units": ""
+            }
+        }, 
+        "experiment_type": {
+            "mapping": "experiment/experiment_type",
+            "mapping_for_search_filter": "individual/biosamples/experiment/experiment_type",
+            "title": "Experiment Types",
+            "description": "Types of experiments performed on a sample",
+            "datatype": "string",
+            "config": {
+                "enum": ["Genotyping", "DNA Methylation", "mRNA-Seq", "smRNA-Seq", "RNA-Seq", "WES", "Other"]
+            }
+        },
+        "type_partic": {
+            "mapping": "individual/extra_properties/type_partic",
+            "title": "Participant type",
+            "description": "Has the patient been hospitalized or is the patient seen on as an outpatient?",
+            "datatype": "string",
+            "config": {
+                "enum": [
+                    "Hospitalized",
+                    "Outpatient"
+                ]
+            }
+        }
+    },
+    "rules": {
+        "count_threshold": 0,
+        "max_query_parameters": 3
+    }
+}
